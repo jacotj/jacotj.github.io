@@ -1,91 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jacot Lab for Pediatric Regenerative Medicine</title>
+
+  <!-- ✅ Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-FqRSKPbgp72xAA9MBJZ5TuMG+1ID+gWiF3DQbeqmu1LgBP1s3r1aKPQyGrw8ubtV" crossorigin="anonymous">
+
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding:0;}
-    header, nav, main, footer { padding: 20px; }
-    nav a { margin-right: 15px; text-decoration: none; color: #0077cc; }
-    .hero { background: #f4f4f4; padding: 60px 20px; text-align:center; }
-    .section { padding: 40px 20px; }
-    .values li { margin-bottom: .5em; }
-    footer { background: #eee; font-size: .9em; text-align:center; }
+    .hero {
+      background: #f8f9fa;
+      padding: 5rem 1rem;
+      text-align: center;
+    }
+    footer {
+      background-color: #f1f1f1;
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Jacot Lab for Pediatric Regenerative Medicine</h1>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#lab-members">Lab Members</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<!-- Header -->
+<header class="bg-light py-3 border-bottom">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <h1 class="h3 mb-2 mb-md-0">Jacot Lab for Pediatric Regenerative Medicine</h1>
+    <nav>
+      <a class="btn btn-link" href="#home">Home</a>
+      <a class="btn btn-link" href="#lab-members">Lab Members</a>
+      <a class="btn btn-link" href="#news">News</a>
+      <a class="btn btn-link" href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
+<!-- Hero Section -->
 <section id="home" class="hero">
-  <h2>The Jacot Lab for Pediatric Regenerative Medicine</h2>
-  <p>Engineering biomaterials and stem‑cell derived 3D heart tissue to treat structural defects in newborns.</p>
+  <div class="container">
+    <h2 class="display-5 mb-3">Engineering Tissue for Congenital Heart Defects</h2>
+    <p class="lead">Creating biomaterials and stem-cell derived 3D heart tissue for structural repair in newborns.</p>
+
+    <!-- 🔻 Optional hero image -->
+    <!-- <img src="images/lab_hero.jpg" class="img-fluid mt-4" alt="Lab hero image"> -->
+  </div>
 </section>
 
-<section class="section">
-  <h3>Lab Values</h3>
-  <ol class="values">
-    <li>Lab members look out for safety and well‑being and speak up when needed.</li>
-    <li>Transparency in decisions and publications, with raw data available.</li>
-    <li>We train the next generation of bioengineers in a supportive, growth‑oriented culture.</li>
-    <li>We embrace inclusion and equal support for all lab members.</li>
-    <li>We value the public and philanthropic funds that support our research.</li>
-  </ol>
+<!-- Lab Values -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <h3 class="mb-4">Lab Values</h3>
+    <ol class="list-group list-group-numbered">
+      <li class="list-group-item">Lab members look out for safety and well-being and speak up when needed.</li>
+      <li class="list-group-item">Transparency in decisions and publications, with raw data available.</li>
+      <li class="list-group-item">We train the next generation of bioengineers in a supportive, growth-oriented culture.</li>
+      <li class="list-group-item">We embrace inclusion and equal support for all lab members.</li>
+      <li class="list-group-item">We value the public and philanthropic funds that support our research.</li>
+    </ol>
+  </div>
 </section>
 
-<section class="section">
-  <h3>Mission Statement</h3>
-  <p>
-    The Jacot Lab focuses on pediatric regenerative medicine, with expertise in cardiac tissue, biomaterial interaction, and amniotic fluid and induced pluripotent stem cells. We cultivate a joyful, respectful environment that attracts and trains world‑class students and postdocs.
-  </p>
+<!-- Mission Statement -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="mb-4">Mission Statement</h3>
+    <p>
+      The Jacot Lab focuses on pediatric regenerative medicine, with expertise in cardiac tissue, biomaterial interaction, and amniotic fluid and induced pluripotent stem cells. We cultivate a joyful, respectful environment that attracts and trains world-class students and postdocs.
+    </p>
+  </div>
 </section>
 
-<section class="section">
-  <h3>Research Focus Areas</h3>
-  <h4>Laboratory‑Grown Heart Tissue</h4>
-  <p>
-    Our goal is to isolate stem cells from amniotic fluid before birth and create personalized heart tissue to repair structural defects postnatally, using the baby’s own cells. Approximately 80% of structural heart defects are detected by ultrasound.  [oai_citation:1‡Jacot Lab for Pediat](https://www.jacotlab.com/?utm_source=chatgpt.com)
-  </p>
+<!-- Research Areas -->
+<section class="py-5">
+  <div class="container">
+    <h3 class="mb-5">Research Focus Areas</h3>
 
-  <h4>Mechanics of Heart Development</h4>
-  <p>
-    We use lab‑grown heart tissue to study proliferation, migration, and force generation in normal versus genetic‑condition hearts (e.g. Down syndrome, Noonan syndrome, hypoplastic left heart syndrome).  [oai_citation:2‡Jacot Lab for Pediat](https://www.jacotlab.com/?utm_source=chatgpt.com) [oai_citation:3‡ucdengineeringnews.com](https://ucdengineeringnews.com/q-a-with-jeffrey-jacot/?utm_source=chatgpt.com)
-  </p>
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <h4>Laboratory-Grown Heart Tissue</h4>
+        <p>We aim to isolate stem cells from amniotic fluid before birth and create personalized heart tissue to repair structural defects postnatally, using the baby’s own cells.</p>
+      </div>
+      <div class="col-md-6">
+        <!-- 🔻 Optional image -->
+        <!-- <img src="images/heart_tissue.jpg" class="img-fluid rounded" alt="Heart tissue research"> -->
+      </div>
+    </div>
 
-  <h4>Biomanufacturing of Heart Tissue</h4>
-  <p>
-    We develop scaffolds, bioreactors, and controlled drug‑release platforms to scale regenerative therapies toward cost‑effective clinical application.  [oai_citation:4‡Jacot Lab for Pediat](https://www.jacotlab.com/?utm_source=chatgpt.com)
-  </p>
+    <div class="row mb-4">
+      <div class="col-md-6 order-md-2">
+        <h4>Mechanics of Heart Development</h4>
+        <p>We study force generation and cell behavior in hearts with genetic conditions like Down syndrome and hypoplastic left heart syndrome using engineered tissues.</p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <!-- 🔻 Optional image -->
+        <!-- <img src="images/mechanics.jpg" class="img-fluid rounded" alt="Mechanics of heart tissue"> -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Biomanufacturing of Heart Tissue</h4>
+        <p>We design scaffolds, bioreactors, and drug delivery platforms to move regenerative heart therapies toward clinical and scalable use.</p>
+      </div>
+      <div class="col-md-6">
+        <!-- 🔻 Optional image -->
+        <!-- <img src="images/biomanufacturing.jpg" class="img-fluid rounded" alt="Biomanufacturing process"> -->
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="section" id="contact">
-  <h3>Contact Us</h3>
-  <p>
-    <strong>Address:</strong> 12705 E. Montview Blvd, Aurora, CO<br>
-    <strong>Email:</strong> jeffrey.jacot@cuanschutz.edu<br>
-    <strong>Phone:</strong> 303‑724‑8696
-  </p>
-  <form>
-    <label>Message:<br>
-      <textarea rows="4" cols="40" placeholder="Your message"></textarea>
-    </label><br>
-    <button type="submit">Submit</button>
-  </form>
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h3 class="mb-4">Contact Us</h3>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <p><strong>Address:</strong> 12705 E. Montview Blvd, Aurora, CO</p>
+        <p><strong>Email:</strong> <a href="mailto:jeffrey.jacot@cuanschutz.edu">jeffrey.jacot@cuanschutz.edu</a></p>
+        <p><strong>Phone:</strong> 303-724-8696</p>
+      </div>
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- Footer -->
 <footer>
-  <p>©2025 Jacot Lab for Pediatric Regenerative Medicine</p>
-  <p>Originally hosted on Wix. Now recreated for GitHub Pages.</p>
+  <div class="container">
+    <p>©2025 Jacot Lab for Pediatric Regenerative Medicine</p>
+    <p>Originally hosted on Wix. Now recreated for GitHub Pages.</p>
+  </div>
 </footer>
 
+<!-- ✅ Bootstrap JS (for future interactive elements) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2azl1Q2E+cu6UoLDEJ+zEyLz2NRgtLPp5g2CZbcqE6+KpElj4a2Eewc9w9R" crossorigin="anonymous"></script>
 </body>
 </html>
