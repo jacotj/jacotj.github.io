@@ -15,8 +15,40 @@
     html { scroll-behavior: smooth; }
     body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
     .navbar-brand { font-weight: 700; letter-spacing: .03em; }
+    .nav-logo {
+        height: 42px;
+        width: auto;
+    }
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(rgba(10, 31, 54, 0.75), rgba(10, 31, 54, 0.75)),
+    url('assets/images/lab-hero.jpg') center/cover no-repeat;
+
+  color: white;
+  padding: 6rem 0;
+}
+  .hero-card {
+        max-width: 900px;
+        background: rgba(0, 0, 0, .28);
+        backdrop-filter: blur(3px);
+        padding: 2.5rem;
+        border-radius: 1.25rem;
+    }
+
+    .hero-logo {
+        max-width: 280px;
+        height: auto;
+        margin-bottom: 1.5rem;
+        background: white;
+        padding: .75rem 1rem;
+        border-radius: .5rem;
+    }
     .hero {
-      background: linear-gradient(rgba(31,78,121,.7), rgba(31,78,121,.7)), url('assets/images/lab-hero.jpg') center/cover no-repeat;
+      background: linear-gradient(rgba(31,78,121,.7), rgba(31,78,121,.7)), url('assets/images/lab-hero2.jpg') center/cover no-repeat;
       color: white;
       padding: 7rem 0;
     }
@@ -47,6 +79,46 @@
       border-top-right-radius: 1rem;
       background: #e9ecef;
     }
+.news-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background: white;
+}
+
+.pub-list {
+  counter-reset: pub-counter;
+}
+
+.pub-item {
+  counter-increment: pub-counter;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.pub-item::before {
+  content: counter(pub-counter) ".";
+  font-weight: 700;
+  color: var(--jl-primary);
+  margin-right: .5rem;
+}
+
+.pub-title {
+  font-weight: 700;
+  color: #111827;
+}
+
+.pub-authors {
+  color: #4b5563;
+  margin-bottom: .15rem;
+}
+
+.pub-journal {
+  color: #374151;
+  margin-bottom: 0;
+}
     .bg-light-blue { background: var(--jl-light); }
     footer { background: #0f172a; color: #cbd5e1; }
     footer a { color: white; }
@@ -56,7 +128,10 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-white sticky-top border-bottom">
     <div class="container">
-      <a class="navbar-brand text-primary" href="#home">Jacot Lab</a>
+      <a class="navbar-brand d-flex align-items-center gap-2 text-primary" href="#home">
+      <img src="assets/images/cu-anschutz-logo.jpg" alt="CU Anschutz Medical Campus" class="nav-logo">
+      <span>Jacot Lab</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -66,37 +141,37 @@
           <li class="nav-item"><a class="nav-link" href="#values">Lab Values</a></li>
           <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
           <li class="nav-item"><a class="nav-link" href="#members">Lab Members</a></li>
-          <li class="nav-item"><a class="nav-link" href="#alumni">Alumni</a></li>
-          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+<li class="nav-item"><a class="nav-link" href="#alumni">Alumni</a></li>
+<li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+<li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+<li class="nav-item"><a class="nav-link" href="#join">Join</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+       </ul>
       </div>
     </div>
   </nav>
 
-  <header id="home" class="hero">
-    <div class="container">
-      <p class="smallcaps mb-2">Pediatric Regenerative Medicine</p>
-      <h1 class="display-4 fw-bold">The Jacot Lab</h1>
-      <p class="lead col-lg-9">
-        We focus on pediatric regenerative medicine, with core expertise in cardiac tissue,
-        biomaterial interactions, and amniotic fluid and induced pluripotent human stem cells.
+<header id="home" class="hero">
+  <div class="container">
+    <div class="hero-card">
+      <h1 class="display-4 fw-bold">The Jacot Lab for Pediatric Regenerative Medicine</h1>
+      <p class="lead col-lg-10">
+        Generating laboratory-grown heart tissue for therapeutic interventions and understanding the development of heart structure.
       </p>
       <div class="d-flex gap-2 flex-wrap mt-4">
         <a href="#research" class="btn btn-light btn-lg">Research Areas</a>
-        <a href="#members" class="btn btn-outline-light btn-lg">Meet the Lab</a>
+        <a href="#members" class="btn btn-light btn-lg">Meet the Lab</a>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
   <main>
     <section class="py-5">
       <div class="container">
         <h2 class="section-title">Mission Statement</h2>
         <p class="mb-0">
-          We aim to have a lab culture that prepares members to be future leaders in their fields,
-          maintains a joyful, respectful, and productive environment, and attracts outstanding students
-          and postdoctoral researchers.
+          We focus on pediatric regenerative medicine, with core expertise in cardiac tissue, biomaterial interactions, and amniotic fluid and induced pluripotent human stem cells. We aim to have a lab culture that prepares members to be future leaders in their fields; maintains a joyful, respectful, and productive environment; and attracts the top students in the world for graduate student and postdoc opportunities.
         </p>
       </div>
     </section>
@@ -106,8 +181,8 @@
         <h2 class="section-title">Lab Values</h2>
         <div class="row g-4">
           <div class="col-md-6 col-xl-4"><div class="p-4 bg-white value-card"><h3 class="h5">Safety & Well-Being</h3><p class="mb-0">Everybody in the lab looks out for the safety and well-being of all lab members and is willing to speak out or help when needed.</p></div></div>
-          <div class="col-md-6 col-xl-4"><div class="p-4 bg-white value-card"><h3 class="h5">Transparency</h3><p class="mb-0">We aim for transparency in decisions and data/publications while maintaining confidentiality as necessary.</p></div></div>
-          <div class="col-md-6 col-xl-4"><div class="p-4 bg-white value-card"><h3 class="h5">Training</h3><p class="mb-0">Trained bioengineers are the most important product of the lab. We help members get to the next stage of their careers.</p></div></div>
+          <div class="col-md-6 col-xl-4"><div class="p-4 bg-white value-card"><h3 class="h5">Transparency</h3><p class="mb-0">We aim for transparency in decisions and data/publications while maintaining confidentiality as necessary. All raw data will be available and any member of the lab is free to ask why a decision is made.</p></div></div>
+          <div class="col-md-6 col-xl-4"><div class="p-4 bg-white value-card"><h3 class="h5">Training</h3><p class="mb-0">Trained bioengineers are the most important product of the lab. We all help all lab members to get to the next stage of their career and to learn and grow as a biomedical engineer.</p></div></div>
           <div class="col-md-6 col-xl-6"><div class="p-4 bg-white value-card"><h3 class="h5">Inclusion</h3><p class="mb-0">We believe in the inclusion of minority groups and strive to provide equal support to all lab members.</p></div></div>
           <div class="col-md-6 col-xl-6"><div class="p-4 bg-white value-card"><h3 class="h5">Stewardship</h3><p class="mb-0">Our laboratory research is funded by taxpayers and donations for medical research, and we strive to advance those goals responsibly.</p></div></div>
         </div>
@@ -120,7 +195,7 @@
         <div class="row g-4">
           <div class="col-lg-4">
             <article class="research-card overflow-hidden">
-              <img src="assets/images/research-reconstruction.jpg" alt="Illustration of laboratory-grown heart tissue for surgical reconstruction" class="research-img">
+              <img src="assets/images/cropped_3.jpg" alt="Illustration of laboratory-grown heart tissue for surgical reconstruction" class="research-img">
               <div class="p-4">
                 <h3 class="h5">Laboratory-Grown Heart Tissue for Surgical Reconstruction of Structural Defects in Newborns</h3>
                 <p class="mb-0">Our goal is to isolate stem cells from amniotic fluid before birth and create heart tissue that can be used to reconstruct the heart with the baby’s own cells after birth.</p>
@@ -128,8 +203,8 @@
             </article>
           </div>
           <div class="col-lg-4">
-            <article class="research-card overflow-hidden">
-              <img src="assets/images/research-development.jpg" alt="Illustration of mechanics of heart development" class="research-img">
+            <article class="aresearch-card overflow-hidden">
+              <img src="assets/images/cropped_2.jpg" alt="Illustration of mechanics of heart development" class="research-img">
               <div class="p-4">
                 <h3 class="h5">Mechanics of Heart Development</h3>
                 <p class="mb-0">We use laboratory-grown heart tissue to understand proliferation, migration, and force generation in heart structure formation and how these are altered in genetic disease.</p>
@@ -138,7 +213,7 @@
           </div>
           <div class="col-lg-4">
             <article class="research-card overflow-hidden">
-              <img src="assets/images/research-manufacturing.jpg" alt="Illustration of biomanufacturing of heart tissue" class="research-img">
+              <img src="assets/images/cropped_1.jpg" alt="Illustration of biomanufacturing of heart tissue" class="research-img">
               <div class="p-4">
                 <h3 class="h5">Biomanufacturing of Heart Tissue</h3>
                 <p class="mb-0">We investigate scaffold composition, manufacturing methods, bioreactors, and controlled release strategies to improve consistency, cost, and translation.</p>
@@ -155,7 +230,7 @@
         <div class="row g-4">
           <div class="col-sm-6 col-lg-4 col-xl-3">
             <article class="member-card overflow-hidden bg-white">
-              <img src="assets/images/jeffrey-jacot.jpg" alt="Dr. Jeffrey Jacot" class="member-photo">
+              <img src="assets/images/jacot.jpg" alt="Dr. Jeffrey Jacot" class="member-photo">
               <div class="p-3">
                 <h3 class="h5 mb-1">Dr. Jeffrey Jacot</h3>
                 <p class="text-muted mb-0">Associate Professor of Bioengineering</p>
@@ -164,37 +239,64 @@
           </div>
           <div class="col-sm-6 col-lg-4 col-xl-3">
             <article class="member-card overflow-hidden bg-white">
-              <img src="assets/images/mitchell-vedepo.jpg" alt="Dr. Mitchell VeDepo" class="member-photo">
+              <img src="assets/images/photo-to-come.png" alt="Jaelynn Roesler" class="member-photo">
               <div class="p-3">
-                <h3 class="h5 mb-1">Dr. Mitchell VeDepo</h3>
-                <p class="text-muted mb-0">Postdoc, American Heart Association Fellowship</p>
-              </div>
-            </article>
-          </div>
-          <div class="col-sm-6 col-lg-4 col-xl-3">
-            <article class="member-card overflow-hidden bg-white">
-              <img src="assets/images/rachel-reeser.jpg" alt="Rachel Reeser" class="member-photo">
-              <div class="p-3">
-                <h3 class="h5 mb-1">Rachel Reeser</h3>
-                <p class="text-muted mb-0">PhD Candidate, NIH Training Grant Fellowship</p>
-              </div>
-            </article>
-          </div>
-          <div class="col-sm-6 col-lg-4 col-xl-3">
-            <article class="member-card overflow-hidden bg-white">
-              <img src="assets/images/emily-burtch.jpg" alt="Emily Burtch" class="member-photo">
-              <div class="p-3">
-                <h3 class="h5 mb-1">Emily Burtch</h3>
-                <p class="text-muted mb-0">PhD Candidate, CCTSI Training Grant Fellowship</p>
-              </div>
-            </article>
-          </div>
-          <div class="col-sm-6 col-lg-4 col-xl-3">
-            <article class="member-card overflow-hidden bg-white">
-              <img src="assets/images/evelyn-ibarra.jpg" alt="Evelyn Ibarra" class="member-photo">
-              <div class="p-3">
-                <h3 class="h5 mb-1">Evelyn Ibarra</h3>
+                <h3 class="h5 mb-1">Jaelynn Roesler</h3>
                 <p class="text-muted mb-0">MS Candidate</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3">
+            <article class="member-card overflow-hidden bg-white">
+              <img src="assets/images/photo-to-come.png" alt="Hiten Patel" class="member-photo">
+              <div class="p-3">
+                <h3 class="h5 mb-1">Hiten Patel</h3>
+                <p class="text-muted mb-0">MS Candidate</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3">
+            <article class="member-card overflow-hidden bg-white">
+              <img src="assets/images/photo-to-come.png" alt="Omar Rascon" class="member-photo">
+              <div class="p-3">
+                <h3 class="h5 mb-1">Omar Rascon</h3>
+                <p class="text-muted mb-0">MS Candidate</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3">
+            <article class="member-card overflow-hidden bg-white">
+              <img src="assets/images/photo-to-come.png" alt="Alejandro Salazar" class="member-photo">
+              <div class="p-3">
+                <h3 class="h5 mb-1">Alejandro Salazar</h3>
+                <p class="text-muted mb-0">Undergraduate</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3">
+            <article class="member-card overflow-hidden bg-white">
+              <img src="assets/images/photo-to-come.png" alt="Tarren Stephens" class="member-photo">
+              <div class="p-3">
+                <h3 class="h5 mb-1">Tarren Stephens</h3>
+                <p class="text-muted mb-0">Undergraduate</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3">
+            <article class="member-card overflow-hidden bg-white">
+              <img src="assets/images/photo-to-come.png" alt="David Valero" class="member-photo">
+              <div class="p-3">
+                <h3 class="h5 mb-1">David Valero</h3>
+                <p class="text-muted mb-0">Undergraduate</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xl-3">
+            <article class="member-card overflow-hidden bg-white">
+              <img src="assets/images/photo-to-come.png" alt="Aryam Bikss" class="member-photo">
+              <div class="p-3">
+                <h3 class="h5 mb-1">Aryam Bikss</h3>
+                <p class="text-muted mb-0">Undergraduate</p>
               </div>
             </article>
           </div>
@@ -208,7 +310,12 @@
         <div class="row">
           <div class="col-lg-10">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Jessica McPhee, MS — Unknown</li>
+              <li class="list-group-item">Braeden Koza, MS — PhD student at Mayo Graduate School</li>
+              <li class="list-group-item">Evelyn Ibarra, MS — PhD student in Benninger Lab at CU Anschutz</li>
+              <li class="list-group-item">Emily Burtch, PhD — Process Development Research Scientist, ProKidney Corp.(NIH Training Grant Fellowship)</li>
+              <li class="list-group-item">Rachel Reeser, PhD — Scientific Lead, Lilly Oncology (Crnic Institute Blumenthal Fellowship)</li>
+              <li class="list-group-item">Mitch VeDepo, PhD — Lab Manager and Scientist, EnteroTrack (American Heart Association Fellowship)</li>
+              <li class="list-group-item">Jessica McPhee, MS — Technical Sales Specialist, Thermo Fisher Scientific</li>
               <li class="list-group-item">Ethan Vanderslice, PhD — Scientist, Miromatrix (NIH Training Grant Fellowship)</li>
               <li class="list-group-item">Dillon Jarrell, PhD — Scientist, Engineered Allogeneic Therapies, Umoja Biopharma (NSF Fellowship, NIH F31 Fellowship)</li>
               <li class="list-group-item">Mallory Lennon, MS — Staff Research Associate II, GMP Manufacturing, University of California, San Diego (NSF Fellowship)</li>
@@ -251,24 +358,178 @@
       </div>
     </section>
 
-    <section id="news" class="py-5 bg-light-blue">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
-          <h2 class="section-title mb-0">News</h2>
-          <a href="news.html" class="btn btn-outline-primary">View all posts</a>
-        </div>
-        <div class="row g-4">
-          <div class="col-lg-6">
-            <article class="news-card bg-white p-4">
-              <p class="text-muted mb-2">January 2, 2024</p>
-              <h3 class="h5">Manuscript on cardiomyocytes and vascularized hydrogels published</h3>
-              <p>Vascularization of PEGylated fibrin hydrogels increases the proliferation of human iPSC-cardiomyocytes in <em>Journal of Biomedical Materials Research Part A</em>.</p>
-              <p class="mb-0"><a href="posts/2024-01-02-cardiomyocytes-and-vascularized-hydrogels.html">Read post</a></p>
-            </article>
+<section id="publications" class="py-5 bg-light-blue">
+  <div class="container">
+    <h2 class="section-title">Selected Publications</h2>
+    <p class="mb-4">
+      Selected recent and foundational publications from the Jacot Lab.
+    </p>
+
+    <div class="bg-white p-4 rounded-4 shadow-sm pub-list">
+
+      <div class="pub-item">
+        <span class="pub-title">Aberrant tissue mechanics and mechanotransduction during heart development in Down syndrome</span>
+        <p class="pub-authors">RS Reeser, MC VeDepo, RS Hewawasam, KA Waugh, KA Schade, and colleagues</p>
+        <p class="pub-journal"><em>Journal of Biomechanics</em>, 113103, 2025</p>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-title">Lipid uptake via FATP2 enhances CAR-T therapy resistance in B-cell acute lymphoblastic leukemia</span>
+        <p class="pub-authors">C Garcia, K Lyons, JG Contreras, T Liu, A Donnelly, A Novak, and colleagues</p>
+        <p class="pub-journal"><em>Blood</em> 146, 325, 2025</p>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-title">Amniotic fluid collected from vaginal birth as a source of stem cells for clinical applications and disease modeling</span>
+        <p class="pub-authors">ML Lennon, A Frieman, AK Salazar, I Kogut, G Bilousova, JG Jacot</p>
+        <p class="pub-journal"><em>Stem Cells Translational Medicine</em> 14(7), szaf017, 2025</p>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-title">Bioreactor design for culturing vascularized engineered tissue in flow conditions</span>
+        <p class="pub-authors">DE Ibarra, ME Jewett, DK Jarrell, A Pinales, MC VeDepo, JG Jacot</p>
+        <p class="pub-journal"><em>Tissue Engineering Part A</em> 30(11–12), 304–313, 2024</p>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-title">Vascularization of PEGylated fibrin hydrogels increases the proliferation of human iPSC-Cardiomyocytes</span>
+        <p class="pub-authors">EJ Vanderslice, SGH Golding, JG Jacot</p>
+        <p class="pub-journal"><em>Journal of Biomedical Materials Research Part A</em> 112(4), 625–634, 2024</p>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-title">Trisomy 21 alters cell proliferation and migration of iPSC-derived cardiomyocytes on type VI collagen</span>
+        <p class="pub-authors">RS Reeser, AK Salazar, KM Prutton, JR Roede, MC VeDepo, JG Jacot</p>
+        <p class="pub-journal"><em>Cellular and Molecular Bioengineering</em> 17(1), 25–34, 2024</p>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-title">A prevascularized polyurethane-reinforced fibrin patch improves regenerative remodeling in a rat right ventricle replacement model</span>
+        <p class="pub-authors">ZW Tao, DK Jarrell, A Robinson, EM Cosgriff-Hernandez, JG Jacot</p>
+        <p class="pub-journal"><em>Advanced Healthcare Materials</em> 10(23), 2101018, 2021</p>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-title">Remodeling of ECM patch into functional myocardium in an ovine model: A pilot study</span>
+        <p class="pub-authors">BB Scully, C Fan, B Grigoryan, JG Jacot, GW Vick III, JJ Kim, CD Fraser Jr, and colleagues</p>
+        <p class="pub-journal"><em>Journal of Biomedical Materials Research Part B: Applied Biomaterials</em> 104(8), 2016</p>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-title">Biocompatible carbon nanotube–chitosan scaffold matching the electrical conductivity of the heart</span>
+        <p class="pub-authors">S Pok, F Vitale, SL Eichmann, OM Benavides, M Pasquali, JG Jacot</p>
+        <p class="pub-journal"><em>ACS Nano</em> 8(10), 9822–9832, 2014</p>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-title">Substrate stiffness affects the functional maturation of neonatal rat ventricular myocytes</span>
+        <p class="pub-authors">JG Jacot, AD McCulloch, JH Omens</p>
+        <p class="pub-journal"><em>Biophysical Journal</em> 95(7), 3479–3487, 2008</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="news" class="py-5">
+  <div class="container">
+    <h2 class="section-title">News</h2>
+    <p class="mb-4">
+      Recent lab news, publications, and student milestones.
+    </p>
+
+    <div class="row g-4">
+
+      <div class="col-lg-6 col-xl-3">
+        <article class="news-card bg-white overflow-hidden">
+          <img src="assets/images/news-jaelynn-defense.jpg" alt="Jaelynn Roesler thesis defense" class="news-img">
+          <div class="p-4">
+            <p class="text-muted mb-2">April 24, 2026</p>
+            <h3 class="h5">Jaelynn Roesler successfully defends her MS thesis</h3>
+            <p class="mb-0">
+              Congratulations to Jaelynn Roesler on a successful MS thesis defense.
+            </p>
           </div>
+        </article>
+      </div>
+
+      <div class="col-lg-6 col-xl-3">
+        <article class="news-card bg-white overflow-hidden">
+          <img src="assets/images/news-reeser-2025.jpg" alt="Heart development in Down syndrome publication" class="news-img">
+          <div class="p-4">
+            <p class="text-muted mb-2">2025</p>
+            <h3 class="h5">New paper on heart development in Down syndrome</h3>
+            <p class="mb-0">
+              The lab published work on aberrant tissue mechanics and mechanotransduction during heart development in Down syndrome in <em>Journal of Biomechanics</em>.
+            </p>
+          </div>
+        </article>
+      </div>
+
+<div class="col-lg-6 col-xl-3">
+  <article class="news-card bg-white overflow-hidden">
+    <img src="assets/images/news-racas-poster-2026.jpg" alt="RaCAS 2026 presentation by Salazar and Stephens" class="news-img">
+    <div class="p-4">
+      <p class="text-muted mb-2">2026</p>
+      <h3 class="h5">Salazar and Stephens present at RaCAS 2026</h3>
+      <p class="mb-0">
+        Alejandro Salazar and Tarren Stephens presented a poster titled Effect of Amniotic Fluid Cell Extracellular Vesicles on Macrophage Phenotype
+at the CU Denver Research and Creative Activities Symposium (RaCAS).
+      </p>
+    </div>
+  </article>
+</div>
+
+      <div class="col-lg-6 col-xl-3">
+        <article class="news-card bg-white overflow-hidden">
+          <img src="assets/images/news-amniotic-fluid-2025.jpg" alt="Amniotic fluid stem cell publication" class="news-img">
+          <div class="p-4">
+            <p class="text-muted mb-2">2025</p>
+            <h3 class="h5">New paper on amniotic fluid stem cells</h3>
+            <p class="mb-0">
+              The lab published work on amniotic fluid collected from vaginal birth as a source of stem cells for clinical applications and disease modeling.
+            </p>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="join" class="py-5 bg-light-blue">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-7">
+        <h2 class="section-title">Join the Lab</h2>
+        <p>
+          We welcome inquiries from motivated undergraduate students, graduate students,
+          and postdoctoral researchers interested in pediatric regenerative medicine,
+          cardiac tissue engineering, stem cells, biomaterials, mechanobiology, and
+          congenital heart disease.
+        </p>
+        <p>
+          Prospective lab members should send a brief email describing their research interests,
+          relevant experience, career goals, and why they are interested in the Jacot Lab.
+        </p>
+        <p class="mb-0">
+          Contact: <a href="mailto:jeffrey.jacot@cuanschutz.edu">jeffrey.jacot@cuanschutz.edu</a>
+        </p>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="p-4 bg-white rounded-4 shadow-sm">
+          <h3 class="h5">Opportunities</h3>
+          <ul class="mb-0">
+            <li>Undergraduate research projects</li>
+            <li>MS research opportunities</li>
+            <li>Collaborations in cardiac tissue engineering and pediatric regenerative medicine</li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <section id="contact" class="py-5">
       <div class="container">
@@ -278,19 +539,13 @@
             <p class="mb-1">12705 E. Montview Blvd, Aurora, CO</p>
             <p class="mb-1"><a href="mailto:jeffrey.jacot@cuanschutz.edu">jeffrey.jacot@cuanschutz.edu</a></p>
             <p class="mb-3"><a href="tel:+13037248696">303-724-8696</a></p>
-            <p class="mb-0">For a static GitHub Pages site, replace the Wix form with one of these options:</p>
-            <ul>
-              <li>a simple mailto link,</li>
-              <li>a Google Form, or</li>
-              <li>a free form backend such as Formspree.</li>
-            </ul>
           </div>
           <div class="col-lg-6">
             <div class="p-4 border rounded-4 bg-light">
               <h3 class="h5">Quick links</h3>
               <ul class="mb-0">
-                <li><a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar profile</a></li>
-                <li><a href="https://twitter.com/" target="_blank" rel="noopener">Lab social link</a></li>
+                <li><a href="https://scholar.google.com/citations?user=cvNfjwIAAAAJ&hl=en" target="_blank" rel="noopener">Jacot Google Scholar profile</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/myncbi/jeffrey.jacot.1/bibliography/public/" target="_blank" rel="noopener">Jacot Pubmed Bibliography</a></li>
                 <li><a href="#news">Latest news</a></li>
               </ul>
             </div>
